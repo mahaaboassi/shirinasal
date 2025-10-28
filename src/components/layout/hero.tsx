@@ -1,4 +1,4 @@
-import video from "../../assets/video/shirinasal_small.mp4"
+import video from "../../assets/video/shirinasal.mp4"
 
 const Hero = ()=>{
     return(<section  className="relative">

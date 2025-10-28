@@ -77,6 +77,13 @@ nav ul li:hover::before{
     .container-layout{
         padding: 0 2rem;
     }  
+    .arrow{
+        bottom: 0;
+    }
+    .arrow svg{
+        width: 25px;
+        height: auto;
+    }
 }
 @media (max-width:40px) {
     .container-layout{
