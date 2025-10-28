@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'GT Walsheim Pro Condensed';
+  src: url('./assets/fonts/GTWalsheimPro-CondensedBold.woff2') format('woff2'),
+       url('./assets/fonts/GTWalsheimPro-CondensedBold.woff') format('woff');
+  font-weight: 700; /* or 'bold' */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GT Walsheim Pro Condensed Light';
+  src: url('./assets/fonts/GTWalsheimPro-CondensedLight.woff') format('woff2'),
+       url('./assets/fonts/GTWalsheimPro-CondensedLight.woff2') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GT Walsheim Pro Condensed Regular';
+  src: url('./assets/fonts/GTWalsheimPro-CondensedRegular.woff') format('woff2'),
+       url('./assets/fonts/GTWalsheimPro-CondensedRegular.woff2') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GT Walsheim Pro Condensed Medium';
+  src: url('./assets/fonts/GTWalsheimPro-CondensedMedium.woff') format('woff2'),
+       url('./assets/fonts/GTWalsheimPro-CondensedMedium.woff2') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+@import "tailwindcss";
+@theme {
+  --breakpoint-2xs: 400px;
+  --breakpoint-xs: 500px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-mid: 900px;
+  --breakpoint-lg: 1020px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+/* 
+  2xs=> 400px
+  xs => 500px
+  sm => 576px
+  md => 768px
+  lg => 1020px
+  xl => 1280px
+  2xl => 1536px
+*/
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --main : #D90000;
+  --secondary : #D9C3B4;
+  
+  --main-light: #ff4d4d;   
+  --main-dark: #990000;     
+  --secondary-light: #e8d5ca;
+  --secondary-dark: #b79c8d;
+
+   --dark: #000000;
+  --light: #ffffff;
+  --light-1: #cccaca4a;
+
+  --grey: #595A5C;
+  --grey-2: #757574;
+  --grey-3: #a5a5a5;
+  --grey-4: #d1d1d1;       
+  --grey-5: #f2f2f2;
+
+  --success-color: #22c55e; 
+  --error-color: #ef4444;   
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
+  
+  /* 🌗 Shadows & Overlays */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay: rgba(0, 0, 0, 0.4);
+
+  /* Fonts */
+  --font-4xl: clamp(3.2rem, 2.3vw + 1rem, 3.8rem);
+  --font-3xl: clamp(2.8rem, 2vw + 0.8rem, 3.2rem);
+  --font-xxl: clamp(2rem, 0.86vw + 0.77rem, 2.4rem);
+  --font-xl: clamp(1.1rem, 0.71vw + 0.74rem, 1.6rem);
+  --font-l: clamp(1rem, 0.57vw + 0.71rem, 1.4rem);
+  --font-size-base: clamp(1rem, 0.4vw + 0.8rem, 1.1rem); /* For paragraph*/
+  --font-s: clamp(0.9rem, 0.43vw + 0.69rem, 1.2rem);
+  --font-xs: clamp(0.8rem, 0.29vw + 0.66rem, 1rem);
+  --font-xxs: clamp(0.7rem, 0.29vw + 0.56rem, 0.9rem);
+
+  --font-light : "GT Walsheim Pro Condensed Light";
+  --font-regular : "GT Walsheim Pro Condensed Regular";
+  --font-medium : "GT Walsheim Pro Condensed Medium";
+  --font-bold: "GT Walsheim Pro Condensed"
+  /* Shadow */
+  --shadow-box : 0 4px 4px 0 rgba(0,0,0,0.25);
+  
+
+  font-weight: 400;
+  color: #211d37;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  font-family: 'GT Walsheim Pro Condensed Regular';
+  margin: 0;
+  background : var(--light);
+  font-size: var(--font-s);
+  color: var(--dark);
+}
+
+h1 {
+  
+}
+button{
+  background : linear-gradient(to right , var(--yellow-1),var(--yellow-2)) ;
+  color: var(--light);
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: var(--font-size-s);
+  transition: 0.4s;
+  font-weight: 500;
+}
+button:hover{
+  background : var(--light) ;
+  color: var(--dark-1);
+}
+.outline-btn{
+  background : var(--light) ;
+  color: var(--dark-1) ;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: var(--font-size-s);
+  transition: 0.4s;
+  font-weight: 500;
+}
+.outline-btn:hover{
+  background : var(--error-color)  ;
+  color: var(--light);
+}
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.text-error{
+  color: var(--error-color);
+}
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(105, 102, 102, 0.6);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--dark);
+    background: var(--light);
+  }
+}
+@media (max-width:1200px) {
+
+}
+@media (max-width:1020px) {
+
+}
+@media (max-width:900px) {
+    
+}
+@media (max-width:800px) {
+    
+}
+@media (max-width:768px) {
+
+}
+@media (max-width : 700px) {
+
+}
+@media (max-width:600px) {
+
+}
+@media (max-width:500px) {
+
+}
+@media (max-width:450px) {
+
+}
+@media (max-width:400px) {
+
+}
+@media (max-width:350px) {
+
+}
+@media (max-width:450px) {
+
+
+}
