@@ -53,5 +53,17 @@ nav .line{
     }
 }
 @media (max-width:900px) {
-    
+    .container-layout{
+        padding: 0 3rem;
+    }
+}
+@media (max-width:768px) {
+    .container-layout{
+        padding: 0 2rem;
+    }  
+}
+@media (max-width:40px) {
+    .container-layout{
+        padding: 0 1rem;
+    }  
 }
