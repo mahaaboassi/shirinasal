@@ -17,6 +17,22 @@ nav .line{
     background-color: var(--light);
     opacity: 0.5;
 }
+nav ul li{
+    position: relative;
+
+}
+nav ul li::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background: var(--light);
+    width: 0;
+    transition: 0.3s linear;
+}
+nav ul li:hover::before{
+    width: 100%;
+}
 #search{
     border-radius: 10px;
     height: 50px;

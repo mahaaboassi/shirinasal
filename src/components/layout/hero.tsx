@@ -6,7 +6,7 @@ const Hero = ()=>{
                 muted
                 loop
                 playsInline
-                className="-mt-10 w-full h-auto object-cover">
+                className="mt-30 md:mt-28 xl:-mt-10 w-full h-auto object-cover">
             <source src={video} />
         </video>
         <div className="absolute -translate-x-1/2 bottom-10 left-1/2 arrow">
